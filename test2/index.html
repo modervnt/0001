@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effet de fenêtres vidéo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="text-line">
+            <span class="text-span" >We're here</span>
+            <div class="window" style="width: 350px;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+            <span class="text-span">to make healthy </span>
+             <div class="window" style="width: 200px;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+            <span class="text-span">living effortless</span>
+            <div class="window" style="width: 300px;">
+                <video autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <span class="text-span">so you can</span>
+            <div class="window" style="width: 300px;">
+                <video autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <span class="text-span">live longer and happier</span>
+             <div class="window" style="width: 700px;">
+                <video autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    // Synchroniser les vidéos (optionnel)
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('video');
+        const mainVideo = videos[0];
+        
+        mainVideo.play();
+        
+        // Utiliser le temps de lecture de la première vidéo pour synchroniser les autres
+        for (let i = 1; i < videos.length; i++) {
+            videos[i].currentTime = mainVideo.currentTime;
+            videos[i].play();
+        }
+    });
+</script>

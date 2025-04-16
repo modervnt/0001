@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="text-line">
+            <span class="text-span" >We're</span> 
+            <span class="text-span" >here</span>
+            <div class="window" style="width: 30vw;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+
+            <span class="text-span" >to</span>
+            <span class="text-span" >make</span>
+            <span class="text-span" >healthy</span>
+            <div class="window" style="width: 15vw;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+            <span class="text-span" >living</span>
+            <span class="text-span" >effortless</span>
+            <span class="text-span" >so</span>
+            <span class="text-span" >you</span>
+            <span class="text-span" >can</span>
+            <div class="window" style="width: 20vw;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+            <span class="text-span" >live</span>
+            <span class="text-span" >longer</span>
+            <span class="text-span" >and</span>
+            <span class="text-span" >happier</span>
+            <div class="window" style="width: 65vw;">
+                <video autoplay loop muted>
+                    <source src="video.mp4"  type="video/mp4">
+                </video>
+            </div>
+
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    // Synchroniser les vidéos (optionnel)
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('video');
+        const mainVideo = videos[0];
+        
+        mainVideo.play();
+        
+        // Utiliser le temps de lecture de la première vidéo pour synchroniser les autres
+        for (let i = 1; i < videos.length; i++) {
+            videos[i].currentTime = mainVideo.currentTime;
+            videos[i].play();
+        }
+    });
+</script>
